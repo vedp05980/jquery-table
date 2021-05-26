@@ -1,0 +1,179 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <form action="">
+            <fieldset>
+            
+                <table class="table table-bordered">
+                    <div class="table1">
+                        <thead>
+                            <tr>
+                    
+                                <th>sr.no</th>
+                                <th>atul</th>
+                                <th>ved</th>
+                                <th>sachin</th>
+                                <th>Total</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td><input type="number" class="form-control prc" id="cal"/></td>
+                                <td><input type="number" class="form-control prc1" id="cal"/></td>
+                                <td><input type="number" class="form-control prc2" id="cal"/></td>
+                                
+                                <td id="result4"></td>
+                                
+                               
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td><input type="number" class="form-control prc" id="cal1"/></td>
+                                <td><input type="number" class="form-control prc1" id="cal1"/></td>
+                                <td><input type="number" class="form-control prc2" id="cal1"/></td>
+                                <td id="result5"></td>
+                         
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td><input type="number" class="form-control prc" id="cal2"/></td>
+                                <td><input type="number" class="form-control prc1" id="cal2"/></td>
+                                <td><input type="number" class="form-control prc2" id="cal2"/></td>
+                                <td id="result6"></td>
+                            </tr>
+                            <tr>
+                                <th>Total</th>
+                                <td id="result"></td>
+                                <td id="result2"></td>
+                                <td id="result3"></td>
+                                <!-- <td id="result4"></td> -->
+                            </tr>
+                        </tbody>
+                    </div>
+   
+                </table>
+            </fieldset>
+        </form>
+    </div>
+  
+
+
+
+
+    <script src="https://code.jquery.com/jquery-migrate-3.3.1.js"></script>
+    <script>
+        $('.table').on('input','.prc',function(){
+var totalSum = 0;
+$('.table .prc').each (function(){
+var inputVal = $(this).val();
+if($.isNumeric(inputVal)){
+    totalSum += parseFloat(inputVal);
+}
+});
+
+$('#result').text(totalSum);
+
+
+        });
+        
+    </script>
+
+<script>
+    $('.table').on('input','.prc1',function(){
+var totalSum = 0;
+$('.table .prc1').each (function(){
+var inputVal = $(this).val();
+if($.isNumeric(inputVal)){
+totalSum += parseFloat(inputVal);
+}
+});
+
+$('#result2').text(totalSum);
+
+    });
+    
+</script>
+
+<script>
+    $('.table').on('input','.prc2',function(){
+var totalSum = 0;
+$('.table .prc2').each (function(){
+var inputVal = $(this).val();
+if($.isNumeric(inputVal)){
+totalSum += parseFloat(inputVal);
+}
+});
+
+$('#result3').text(totalSum);
+
+
+    });
+    
+</script>
+
+
+
+<!-- ver -->
+
+<script>
+    $('.table').on('input','#cal',function(){
+var totalSum = 0;
+$('.table #cal').each (function(){
+var inputVal = $(this).val();
+if($.isNumeric(inputVal)){
+totalSum += parseFloat(inputVal);
+}
+});
+
+$('#result4').text(totalSum);
+
+
+    });
+    
+</script>
+
+<script>
+$('.table').on('input','#cal1',function(){
+var totalSum = 0;
+$('.table #cal1').each (function(){
+var inputVal = $(this).val();
+if($.isNumeric(inputVal)){
+totalSum += parseFloat(inputVal);
+}
+});
+
+$('#result5').text(totalSum);
+
+});
+
+</script>
+
+<script>
+$('.table').on('input','#cal2',function(){
+var totalSum = 0;
+$('.table #cal2').each (function(){
+var inputVal = $(this).val();
+if($.isNumeric(inputVal)){
+totalSum += parseFloat(inputVal);
+}
+});
+
+$('#result6').text(totalSum);
+
+
+});
+
+</script>
+
+    
+</body>
+</html>
